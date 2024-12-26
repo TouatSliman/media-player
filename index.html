@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>directly play video</title>
+</head>
+<body>
+    <h1>Directly play video</h1>
+    <input id="url" type="text" placeholder="Enter the url">
+    <video id="video" src="#" controls>
+        your browser does not support the video tag
+    </video>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #333;
+            color: #e2e2e2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-weight: 900;
+            font-size: 1.7rem;
+            color: rgb(247, 99, 247);
+            text-shadow: 0 0 10px rgba(173, 65, 245, 0.5), 0 0 20px rgba(173, 65, 245, 0.5),
+            0 0 30px rgba(173, 65, 245, 0.5), 0 0 40px rgba(173, 65, 245, 0.5),
+            0 0 50px rgba(173, 65, 245, 0.5), 0 0 60px rgba(173, 65, 245, 0.5);
+        }
+        #video{
+            margin-top: 5rem;
+            width: 60%;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(173, 65, 245, 0.5), 0 0 20px rgba(173, 65, 245, 0.5),
+            0 0 30px rgba(173, 65, 245, 0.5), 0 0 40px rgba(173, 65, 245, 0.5),
+            0 0 50px rgba(173, 65, 245, 0.5), 0 0 60px rgba(173, 65, 245, 0.5);
+        }
+        #url{
+            margin-top: 1rem;
+            width: 40%;
+            border-radius: 16px;
+            padding: 10px 20px;
+            border: 1px solid rgb(194, 47, 194);
+            border-radius: 16px;
+            background-color: transparent;
+            color: #e2e2e2;
+            outline: none;
+        }
+        @media screen and (max-width: 700px) {
+            #video{
+                width: 90%;
+            }
+            #url{
+                width: 70%;
+            }
+        }
+    </style>
+    <script>
+        let url = document.getElementById("url");
+        let video = document.getElementById("video");
+        url.addEventListener("onkeyup",function(){
+            video.src = url.value;
+        })
+    </script>
+</body>
+</html>
